@@ -88,10 +88,8 @@ http://viima.github.io/jquery-comments/*/
 
 .jquery-comments .profile-picture {
 	float: left;
-	width: 3.6rem;
-	height: 3.6rem;
-	max-width: 50px;
-	max-height: 50px;
+	width: 40px;
+	height: auto;
 }
 
 .jquery-comments i.profile-picture {
@@ -103,6 +101,11 @@ http://viima.github.io/jquery-comments/*/
 	border-radius: 50%;
 }
 
+.jquery-comments .commenting-field {
+	display: table;
+	width: 100%;
+}
+
 .jquery-comments .commenting-field.main{
 	margin-bottom: 0.75em;
 }
@@ -112,7 +115,9 @@ http://viima.github.io/jquery-comments/*/
 }
 
 .jquery-comments .textarea-wrapper {
-	overflow: hidden;
+	display: table-cell;
+	vertical-align: top;
+	width: 100%;
 	padding-left: 15px;
 	position: relative;
 }
@@ -568,18 +573,13 @@ http://viima.github.io/jquery-comments/*/
 
 
 /* Child comments */
-.jquery-comments ul.main li.comment .child-comments > *:before { /* Margin for second level content */
-	content: "";
-	height: 1px;
-	float: left;
-
-	width: calc(3.6em + .5em);	/* Profile picture width plus margin */
-	max-width: calc(50px + .5em);	/* Profile picture max width plus margin */
+.jquery-comments ul.main li.comment .child-comments {
+	margin-left: 40px;
 }
 
 .jquery-comments ul.main li.comment .child-comments .profile-picture {
-	width: 2.4rem;
-	height: 2.4rem;
+	width: 35px;
+	height: auto;
 }
 
 .jquery-comments ul.main li.comment .child-comments i.profile-picture {
